@@ -1,8 +1,8 @@
-# C note 1
+# C note
 
 ### __Struct with static__
 
-__Call structure with a function using static.__
+__Call structure with a function using static. (Use like a global variable in C)__
 
 ``` C
 typedef struct s_struct
@@ -13,7 +13,7 @@ typedef struct s_struct
 
 t_struct *function(void)
 {
-    static t_struct var = NULL;
+    static t_struct *var = NULL;
 
     if (!var)
     {
