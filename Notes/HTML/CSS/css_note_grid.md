@@ -58,3 +58,64 @@ grid-area: grid-row-start / grid-column-start / grid-row-end / grid-column-end
 ```
 
 - ```repeat(number, 'numer'{px, %, fr} ...)``` and ```minmax('number'px, 'number'px)``` is some utils function for grid.
+
+- ```grid-template-areas``` specifies grid named grid areas.
+```css
+.container
+{
+	grid-template-areas:	"a a"
+							"b b"
+							"c c"
+}
+
+.a {
+	grid-area: a;
+}
+```
+
+- grid layouts are two-dimensional: they have a row, or inline, axis and a column, or block, axis.
+
+- ```justify-items``` specifies how individual elements should spread across the row axis.
+```css
+justify-items: start / end / center / stretch
+```
+
+- ```justify-content``` specifies how groups of elements should spread across the row axis.
+```css
+justify-content: start / end / center / stretch / space-around / space-between / space-evenly
+```
+
+- ```justify-self``` specifies how a single element should position itself with respect to the row axis.
+```css
+justify-self: start / end / center / stretch
+```
+
+- ```align-items``` specifies how individual elements should spread across the column axis.
+```css
+align-items: start / end / center / stretch
+```
+
+- ```align-content``` specifies how groups of elements should spread across the column axis.
+```css
+align-content: start / end / center / stretch / space-around / space-between / space-evenly
+```
+
+- ```align-self``` specifies how a single element should position itself with respect to the column axis.
+```css
+align-self: start / end / center / stretch
+```
+
+- ```grid-auto-rows``` specifies the height of rows added implicitly to the grid.
+```css
+grid-auto-rows: 'number'{px, %, fr, repeat()}
+```
+
+- ```grid-auto-columns``` specifies the width of columns added implicitly to the grid.
+```css
+grid-auto-columns: 'number'{px, %, fr, repeat()}
+```
+
+- ```grid-auto-flow``` specifies in which direction implicit elements should be created.
+```css
+grid-auto-flow: row / column / dense
+```
